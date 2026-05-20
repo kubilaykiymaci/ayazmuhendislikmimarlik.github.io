@@ -128,52 +128,6 @@
     });
   });
 
-  // Contact form (static - shows success message)
-  var contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var name = contactForm.querySelector('#name');
-      var email = contactForm.querySelector('#email');
-      var message = contactForm.querySelector('#message');
-      var valid = true;
-
-      [name, email, message].forEach(function (field) {
-        if (!field.value.trim()) {
-          field.style.borderColor = '#ef4444';
-          valid = false;
-        } else {
-          field.style.borderColor = '';
-        }
-      });
-
-      if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        email.style.borderColor = '#ef4444';
-        valid = false;
-      }
-
-      if (!valid) return;
-
-      var existing = contactForm.querySelector('.form__success');
-      if (existing) {
-        existing.classList.add('visible');
-      } else {
-        var successDiv = document.createElement('div');
-        successDiv.className = 'form__success visible';
-        successDiv.textContent = 'Mesajınız başarıyla gönderildi. En kısa sürede size döneceğiz.';
-        contactForm.appendChild(successDiv);
-      }
-
-      contactForm.reset();
-
-      setTimeout(function () {
-        var msg = contactForm.querySelector('.form__success');
-        if (msg) msg.classList.remove('visible');
-      }, 5000);
-    });
-  }
-
   // Active nav link on scroll
   var sections = document.querySelectorAll('section[id]');
   function highlightNav() {
