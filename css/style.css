@@ -886,15 +886,28 @@ a.contact__card:hover .contact__card-action {
 }
 
 .faq__icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
-  color: var(--color-primary);
+  position: relative;
   transition: var(--transition);
 }
 
-.faq__item[open] .faq__icon {
-  transform: rotate(180deg);
+.faq__icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  transform: translate(-50%, -65%) rotate(45deg);
+  transition: var(--transition);
+}
+
+.faq__item[open] .faq__icon::before {
+  transform: translate(-50%, -35%) rotate(-135deg);
 }
 
 .faq__answer {
