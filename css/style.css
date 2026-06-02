@@ -870,11 +870,17 @@ a.contact__card:hover .contact__card-action {
   padding: 24px 28px;
   cursor: pointer;
   list-style: none;
+  list-style-type: none;
   gap: 16px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.faq__question::-webkit-details-marker {
+.faq__question::-webkit-details-marker,
+.faq__question::marker {
   display: none;
+  content: '';
+  font-size: 0;
 }
 
 .faq__question h3 {
