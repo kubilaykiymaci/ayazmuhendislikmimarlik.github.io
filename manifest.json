@@ -1,0 +1,27 @@
+{
+  "name": "Ayaz Mühendislik ve Mimarlık",
+  "short_name": "Ayaz Müh.",
+  "description": "Sakarya'da çelik konstrüksiyon, sanayi tesisleri, ticaret merkezleri ve konut projeleri — Ayaz Mühendislik ve Mimarlık",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a5f",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "images/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo-a-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
